@@ -26,7 +26,7 @@ function  CuboidMaker(props) {
 }
 
 CuboidMaker.prototype.volume = function () {
-  return (props.length * props.width * props.height);
+  return (this.length * this.width * this.height);
 };
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
@@ -39,10 +39,6 @@ function  CuboidMaker(props) {
   this.height = props.height
   
 }
-
-CuboidMaker.prototype.volume = function () {
-  return (this.length * this.width * this.height);
-};
 
 CuboidMaker.prototype.surfaceArea = function () {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
