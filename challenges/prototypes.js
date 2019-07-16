@@ -22,11 +22,12 @@ function  CuboidMaker(props) {
   this.length = props.length;
   this.width = props.width;
   this.height = props.height
-  this.volume = function () {
-    return (props.length * props.width * props.height);
-  };
+  
 }
 
+CuboidMaker.prototype.volume = function () {
+  return (props.length * props.width * props.height);
+};
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
 
@@ -36,14 +37,16 @@ function  CuboidMaker(props) {
   this.length = props.length;
   this.width = props.width;
   this.height = props.height
-  this.volume = function () {
-    return (props.length * props.width * props.height);
-  };
-  this.surfaceArea = function () {
-    return 2 * (props.length * props.width + props.length * props.height + props.width * props.height);
-  };
+  
 }
 
+CuboidMaker.prototype.volume = function () {
+  return (this.length * this.width * this.height);
+};
+
+CuboidMaker.prototype.surfaceArea = function () {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+};
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
