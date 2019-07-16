@@ -120,11 +120,12 @@ const uni = [];
 
 graduates.filter((graduates) => {
   let university = graduates.university;
-  
-    return uni.push(graduates.university === 'Uni');
-  }
+  uni.push(graduates[university.search('Uni')]);
 
-)
+
+  })
+
+
 console.log(uni);
 
 
